@@ -163,10 +163,6 @@ input:hover {
   color: var(--very-dark-cyan);
 }
 
-#custom-tip-input::after {
-  content: "%";
-}
-
 #custom-tip-input::placeholder {
   color: var(--very-dark-cyan);
   opacity: 80%;
@@ -262,6 +258,7 @@ footer {
   margin-top: 3rem;
   color: var(--very-dark-cyan);
   font-weight: 700;
+  text-align: center;
 }
 
 footer a {
@@ -274,4 +271,61 @@ footer a:visited {
 
 footer a:hover {
   color: var(--dark-grayish-cyan-one);
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    margin-top: 2rem;
+    background-color: white;
+    max-width: 80vw;
+    min-height: 775px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .tip-percent-controls button {
+    max-width: 20vw;
+  }
+
+  .select-tip-container {
+    margin-top: 2rem;
+  }
+
+  #custom-tip-input {
+    max-width: 20vw;
+  }
+  form {
+    margin-top: 2rem;
+  }
+
+  .display {
+    max-width: 70vw;
+    height: 300px;
+    margin-top: -14.5rem;
+  }
+  .display-total {
+    margin-top: 0;
+  }
+
+  .display-tip-amount-person {
+    margin-top: 2rem;
+  }
+  #reset-button {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .display-tip-amount-person h1,
+  .display-total h1 {
+    margin-left: 1rem;
+  }
+
+  ::placeholder {
+    letter-spacing: -1px;
+    font-size: 1rem;
+  }
 }
